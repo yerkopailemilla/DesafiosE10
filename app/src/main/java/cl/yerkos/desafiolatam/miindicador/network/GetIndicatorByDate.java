@@ -17,6 +17,7 @@ public class GetIndicatorByDate extends AsyncTask<String, Void, Wrapper> {
         try {
             Response<Wrapper> response = wrapperCall.execute();
             if (200 == response.code() && response.isSuccessful()){
+                System.out.print(response.body());
                 return response.body();
             } else {
                 return null;
